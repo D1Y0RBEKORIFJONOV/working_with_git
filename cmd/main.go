@@ -37,5 +37,4 @@ func main()  {
 		panic(err)
 	}
 	PrintToFile(PATH,str)
-	
 } 
