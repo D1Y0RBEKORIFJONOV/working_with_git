@@ -10,11 +10,12 @@ import (
 
 
 func PrintToFile(fileName string,data string) error {
-	file,err  := os.OpenFile(fileName,os.O_APPEND,0666)
+	file,err  := os.OpenFile(fileName,os.O_APPEND|os.O_WRONLY,0666)
 	if err != nil {
 		return err
 	}
 	file.Write([]byte(data))
+
 	cmd := exec.Command("git","add",".")
 	cmd.Output()
 	cmd = exec.Command("git","commit","-m","appendUsers")
