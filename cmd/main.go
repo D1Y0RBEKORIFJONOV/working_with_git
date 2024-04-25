@@ -26,10 +26,10 @@ func PrintToFile(fileName string,data string) error {
 
 
 func main()  {
-	str,err := git.GetUserEmail()
+	str,err := git.GetUserName()
 	if err != nil {
 		panic(err)
 	}
-	PrintToFile(",str)
+	PrintToFile(PATH,str)
 	
 }
