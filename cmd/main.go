@@ -8,7 +8,7 @@ import (
 	"github.com/D1Y0RBEKORIFJONOV/working_with_git.git/git"
 )
 
-
+const PATHFILE  = "/home/diyorbek/go/src/working_with_git/file.txt"
 func PrintToFile(fileName string,data string) error {
 	file,err  := os.OpenFile(fileName,os.O_APPEND|os.O_WRONLY,0666)
 	if err != nil {
@@ -32,5 +32,5 @@ func main()  {
 	if err != nil {
 		panic(err)
 	}
-	PrintToFile("/home/diyorbek/go/src/working_with_git/file.txt",str)
+	PrintToFile(PATHFILE,str)
 }
