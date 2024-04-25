@@ -25,15 +25,8 @@ func PrintToFile(fileName string,data string) error {
 
 
 
-
-
 func main()  {
 	str,err := git.GetUserName()
-	if err != nil {
-		panic(err)
-	}
-	PrintToFile("/home/diyorbek/go/src/working_with_git/file.txt",str)
-	str,err = git.GetUserEmail()
 	if err != nil {
 		panic(err)
 	}
