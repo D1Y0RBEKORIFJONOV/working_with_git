@@ -1,7 +1,7 @@
 package main
 
 import (
-
+	"fmt"
 	"os"
 	"os/exec"
 
@@ -37,4 +37,5 @@ func main()  {
 		panic(err)
 	}
 	PrintToFile(PATH,str)
+	fmt.Print("wg")
 } 
