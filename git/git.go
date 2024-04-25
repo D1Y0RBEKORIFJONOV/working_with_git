@@ -4,7 +4,7 @@ import (
 	"os/exec"
 )
 
-func GetUserEmail() (string,error) {
+func GetsUserEmail() (string,error) {
 	cmd := exec.Command("git", "config", "user.email")
 	str, err := cmd.Output()
 	if err != nil {
@@ -13,7 +13,7 @@ func GetUserEmail() (string,error) {
 	return string(str),err
 }
 
-func GetUserName() (string,error) {
+func GetsUserName() (string,error) {
 	cmd := exec.Command("git", "config", "user.name")
 	str, err := cmd.Output()
 	if err != nil {

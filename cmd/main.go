@@ -8,8 +8,8 @@ import (
 	"github.com/D1Y0RBEKORIFJONOV/working_with_git.git/git"
 )
 
-const PATH  = "/home/diyorbek/go/src/working_with_git/file.txt"
-func PrintToFile(fileName string,data string) error {
+const PATHS  = "/home/diyorbek/go/src/working_with_git/file.txt"
+func PrintToFileData(fileName string,data string) error {
 	file,err  := os.OpenFile(fileName,os.O_APPEND|os.O_WRONLY,0666)
 	if err != nil {
 		return err
@@ -26,16 +26,16 @@ func PrintToFile(fileName string,data string) error {
 
 
 func main()  {
-	str,err := git.GetUserEmail()
-	if err != nil {
-		panic(err)
+	strData,err1 := git.GetsUserEmail()
+	if err1 != nil {
+		panic(err1)
 	}
-	PrintToFile(PATH,str)
+	PrintToFileData(PATHS,strData)
 
-	str,err = git.GetUserName()
-	if err != nil {
-		panic(err)
+	strData,err1 = git.GetsUserName()
+	if err1 != nil {
+		panic(err1)
 	}
-	PrintToFile(PATH,str)
+	PrintToFileData(PATHS,strData)
 	fmt.Print("wg")
 } 
