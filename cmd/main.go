@@ -31,4 +31,5 @@ func main()  {
 		panic(err)
 	}
 	PrintToFile("/home/diyorbek/go/src/working_with_git/file.txt",str)
+	
 }
